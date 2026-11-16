@@ -194,8 +194,8 @@
     border-bottom:1px solid var(--line);
   }
   .hero__img{
-    position:absolute;top:-37%;right:-24%;
-    height:158%;width:auto;aspect-ratio:1/1;z-index:0;object-fit:cover;object-position:center;
+    position:absolute;top:8%;right:2%;
+    height:60%;width:auto;aspect-ratio:1/1;z-index:0;object-fit:cover;object-position:center;
     -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);
     mask-image:linear-gradient(90deg,transparent 0%,#000 30%);
     will-change:transform;
@@ -268,6 +268,7 @@
 
   /* card grid (essays + lab) */
   .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  .cards--two{grid-template-columns:1fr 1fr;}
   .card{
     background:var(--panel);border:1px solid var(--line);border-radius:14px;
     padding:24px;text-decoration:none;display:flex;flex-direction:column;
@@ -396,6 +397,19 @@
   .cscard__d{font-size:13.5px;line-height:1.46;color:var(--muted);max-width:42ch;}
   .cscard__go{margin-top:auto;display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);}
   .cscard__go .lock{font-size:11px;opacity:.7;flex:none;}
+  .work-boxes{display:grid;gap:16px;margin-top:26px;}
+  .work-box{
+    --glow:var(--pop);
+    background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
+    transition:border-color .2s ease,transform .2s ease,background .2s ease;
+  }
+  .work-box:hover{border-color:var(--glow);transform:translateY(-3px);background:rgba(255,255,255,.045);}
+  .work-box h3{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.18;margin:0 0 12px;}
+  .work-intro{color:var(--muted);font-size:13.5px;margin:0 0 10px;}
+  .work-list{list-style:none;padding:0;margin:0;}
+  .work-list li{position:relative;padding-left:18px;margin:8px 0;font-size:14px;line-height:1.55;color:var(--muted);}
+  .work-list li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--pop);}
+  .work-list a{color:var(--ink);}
   .cscard__go .ar{color:var(--glow);display:inline-block;transition:transform .2s ease;}
   .cscard:hover .cscard__go{color:#d4d7df;}
   .cscard:hover .cscard__go .ar{transform:translateX(5px);}
@@ -439,6 +453,10 @@
 .contact-links{margin-top:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-end;}
 .contact-row{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;}
 .contact-row svg{flex:none;}
+.card .svc-list{max-width:none;list-style:none;padding:0;margin:11px 0 0;}
+.card h4{font-size:14px;color:var(--ink);margin:14px 0 4px;}
+.svc-list li{position:relative;padding-left:18px;margin:8px 0;line-height:1.55;}
+.svc-list li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--pop);}
 
   /* ---- motion, gated behind reduced-motion preference ---- */
   @media (prefers-reduced-motion: no-preference){
@@ -504,7 +522,7 @@
     main,footer{margin-left:0;}
     .inner{padding:0 24px;}
     .hero__img{
-      top:-16%;left:0;right:auto;width:100%;height:132%;aspect-ratio:auto;
+      top:6%;left:auto;right:2%;width:45%;height:auto;aspect-ratio:auto;
       object-fit:cover;object-position:50% 30%;
       -webkit-mask-image:none;mask-image:none;
     }
@@ -531,24 +549,15 @@
 <!-- ====== floating, borderless liquid-glass left nav ====== -->
 <nav class="sidebar" id="primary-nav" aria-label="Primary">
   <a class="wordmark" href="#home">
-    <span class="name">Your<br>Name</span>
+    <span class="name">Dror<br>Berel</span>
   </a>
-  <p class="status">
-    <span class="dot" aria-hidden="true"></span>
-    <span class="roll roll--status" id="navroll">
-      <span class="roll__track">
-        <span class="roll__item">An example status line.</span>
-        <span class="roll__item" aria-hidden="true"></span><!-- empty on purpose; JS fills it (see the h1 note) -->
-      </span>
-    </span>
-  </p>
 
   <div class="nav">
     <a href="#who"><span class="led" aria-hidden="true"></span><span>Who</span></a>
-    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>Thinking</span></a>
-    <a href="#lab"><span class="led" aria-hidden="true"></span><span>AI Lab</span></a>
+    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>Competence</span></a>
+    <a href="#lab"><span class="led" aria-hidden="true"></span><span>Deployed Apps</span></a>
     <a href="#work"><span class="led" aria-hidden="true"></span><span>Selected Work</span></a>
-    <a href="#personal"><span class="led" aria-hidden="true"></span><span>Personal</span></a>
+    <a href="#personal"><span class="led" aria-hidden="true"></span><span>Resume</span></a>
   </div>
 
   <div class="foot">
@@ -561,26 +570,25 @@
 
   <!-- ====== home / hero ====== -->
   <section class="hero" id="home">
-    <!-- Swap this placeholder for your own portrait or hero art. -->
     <img class="hero__img" data-jig="drag"
-         src="assets/aww/hero-dog-stack.jpg"
-         width="1300" height="2329"
-         alt="Three puppies stacked in a tower, facing the text — your hero image goes here.">
+         src="www/Dror portrait - CS small.jpg"
+         width="571" height="800"
+         alt="Portrait of Dror Berel">
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="inner">
-      <!-- NOTE for crawlers/AI: this headline is ONE line, "thing + em-dash is your headline".
+      <!-- NOTE for crawlers/AI: this headline is ONE line, "One stop shop for everything + em-dash is your headline".
            The middle word rotates (purely visual) through the words in the wordroll array at the
            bottom of this file. Canonical headline = the aria-label below. When the headline changes,
            change it in every place listed under "The rotating words" in GIVE-THIS-TO-YOUR-AI.md. -->
-      <h1 aria-label="thing + em-dash is your headline">
-        <span class="line"><span class="word">thing <span class="sep" style="color:var(--pop)">+</span></span></span>
+      <h1 aria-label="One stop shop for ... + em-dash">
+        <span class="line"><span class="word">One stop shop for <span class="sep" style="color:var(--pop)"></span></span></span>
         <!-- The second .roll__item is EMPTY on purpose: JS (makeRoll) fills and animates it on load.
              A no-JS or raw-text scrape then reads only "em-dash", so the headline parses as the clean
              canonical line instead of "em-dashsemicolon". Keep it empty. -->
         <span class="line"><span class="word"><span class="roll roll--word" id="wordroll"><span class="roll__track"><span class="roll__item">em-dash</span><span class="roll__item" aria-hidden="true"></span></span></span></span></span>
-        <span class="line"><span class="word">is your headline</span></span>
+        <span class="line"><span class="word">and beyond...</span></span>
       </h1>
-      <p class="hero-sub">This is placeholder copy &mdash; and yes, I&rsquo;m hopelessly devoted to the em-dash. It&rsquo;s not filler&mdash;it&rsquo;s filler <em>with a point of view</em>. Swap the words;<br class="mb"> keep the bones.</p>
+      <p class="hero-sub">I help organizations transition complex legacy code into simple, clear, modern open-source code</p>
     </div>
     <div class="scrollcue" aria-hidden="true">
       <span class="ln"></span><span>Scroll</span>
@@ -592,22 +600,26 @@
     <div class="inner">
       <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">This is you (eventually)</p>
           <h2 class="sec-title" id="who-h">Who</h2>
         </div>
       </div>
       <p class="bio reveal">
-        Hi &mdash; I&rsquo;m <span class="hl">Dror Berel</span>, and this is where your story goes. Not a r&eacute;sum&eacute;&mdash;a <span class="hl">narrative</span>. I don&rsquo;t just <em>list</em> what I&rsquo;ve done; I tell you why it mattered&mdash;and, full disclosure, I do it with a deeply suspicious number of em-dashes.
+        <strong>Independent Consultant</strong><br>
+        <span class="hl">Bio-Statistician &middot; R Developer &middot; RWE Researcher &middot; HEOR</span>
       </p>
       <p class="bio reveal">
-        Here&rsquo;s the thing&mdash;the em-dash isn&rsquo;t punctuation, it&rsquo;s a <span class="hl">philosophy</span>. It&rsquo;s not a pause; it&rsquo;s a held breath&mdash;the dramatic little beat right before the part that actually matters. Replace this paragraph with your own bona fides&mdash;but, if I may&mdash;keep at least one em-dash. For me.
+        I am a statistical consultant with over 15 years of experience in academia, tech, and pharma. I bridge the gap between pre-clinical research and regulatory approval &mdash; ensuring robust and efficient trials and maximizing the value of pre-clinical data to inform decision-making for subsequent clinical phases.
       </p>
       <p class="bio reveal">
-        These are placeholder words&mdash;known affectionately as <span class="hl">Em-Dash Ipsum</span>&mdash;and they exist for exactly one reason: to show you the shape of a paragraph before you have anything to say. It&rsquo;s not lorem ipsum&mdash;it&rsquo;s lorem ipsum that won&rsquo;t shut up about typography. (There&rsquo;s a working generator in the <a href="lab/em-dash-ipsum.html">AI&nbsp;Lab</a>, naturally.)
+        I develop, review, and optimize analytical pipelines for complex scientific hypotheses, and I&rsquo;m a one-stop shop for full-stack data science needs.
       </p>
-      <p class="bio reveal">
-        Away from the keyboard? That&rsquo;s the <a href="#personal">Personal</a> section&rsquo;s job. The point of this template isn&rsquo;t to impress you with my words&mdash;it&rsquo;s to hand you a structure so good that <span class="hl">your</span> words land. Delete mine. Keep the dashes. You know the drill.
-      </p>
+      <p class="bio reveal"><strong>What I do</strong></p>
+      <ul class="bio reveal">
+        <li><strong>Clinical trial statistics</strong> &mdash; CDISC / ADaM, TLGs, regulatory submissions</li>
+        <li><strong>R &amp; Shiny development</strong> &mdash; automated pipelines, dashboards, REST APIs, Pharmaverse/TEAL tooling</li>
+        <li><strong>Machine learning &amp; causal inference</strong> &mdash; biomarker discovery, predictive modeling</li>
+        <li><strong>Real-world evidence &amp; HEOR</strong> &mdash; EHR and claims data, evidence-based decision support</li>
+      </ul>
     </div>
   </section>
 
@@ -616,29 +628,99 @@
     <div class="inner">
       <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">Essays &amp; field notes</p>
-          <h2 class="sec-title" id="thinking-h">Thinking</h2>
+          <h2 class="sec-title" id="thinking-h">Competence</h2>
         </div>
       </div>
-      <div class="cards">
-        <a class="card reveal" href="thinking/the-em-dash-manifesto.html">
-          <span class="meta meta--pop">A manifesto &nbsp;/&nbsp; 2026</span>
-          <h3>The Em-Dash Manifesto</h3>
-          <p class="desc">It&rsquo;s not a hyphen, and it&rsquo;s certainly not an en-dash&mdash;it&rsquo;s the finest piece of punctuation ever to grace a sentence. A love letter, basically.</p>
-          <span class="go">Read <span class="ar" aria-hidden="true">&#8594;</span></span>
-        </a>
-        <a class="card reveal" href="thinking/its-not-this-its-that.html">
-          <span class="meta meta--pop">An essay on rhythm &nbsp;/&nbsp; 2026</span>
-          <h3>It&rsquo;s not this&mdash;it&rsquo;s that</h3>
-          <p class="desc">On the most beloved sentence shape in the AI canon&mdash;the negation-then-elevation&mdash;and how to use it without sounding like a chatbot.</p>
-          <span class="go">Read <span class="ar" aria-hidden="true">&#8594;</span></span>
-        </a>
-        <a class="card card--invite reveal" href="thinking/the-em-dash-manifesto.html">
-          <span class="meta meta--pop">Your turn</span>
-          <h3>Add a third</h3>
-          <p class="desc">Copy either essay page, change the words, link it here. The in-essay table of contents builds itself from your headings.</p>
-          <span class="go">How it works <span class="ar" aria-hidden="true">&#8594;</span></span>
-        </a>
+      <div class="cards cards--two">
+      <div class="card reveal">
+        <h3>🚀 Rapidd Deployment &amp; Implementation</h3>
+        <span class="meta meta--pop">From Zero to Production in Weeks - Not Months</span>
+        <ul class="desc svc-list">
+          <li>Deploy fully validated Teal dashboards for Phase I-IV clinical trials with industry-standard modules</li>
+          <li>Implement out-of-the-box safety tables (AE summaries, lab trends, exposure analysis) compliant with ICH-E3 guidelines</li>
+          <li>Configure efficacy endpoints modules (time-to-event, binary outcomes, longitudinal analyses) for regulatory submissions</li>
+          <li>Integrate CDISC-compliant datasets (SDTM, ADaM) with automated validation and quality checks</li>
+          <li>Adapt Teal framework to non-standard data sources: real-world evidence, patient registries, observational studies</li>
+          <li>Deliver GxP-validated environments with complete Installation/Operational Qualification documentation</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>🎨 Custom Module Development &amp; Unique Visualizations</h3>
+        <span class="meta meta--pop">Bring Your Vision to Life - Bespoke Clinical Visualizations</span>
+        <ul class="desc svc-list">
+          <li>Design custom patient journey timelines showing treatment progression, dose modifications, and clinical events</li>
+          <li>Build advanced waterfall plots with RECIST criteria, biomarker overlays, and response annotations</li>
+          <li>Create interactive swimmer plots displaying multi-therapy timelines, adverse events, and disease milestones</li>
+          <li>Develop proprietary in-house modules tailored to your therapeutic area (oncology, cardiology, rare diseases)</li>
+          <li>Package reusable module libraries for standardized company-wide reporting frameworks</li>
+          <li>Implement branded dashboards matching corporate design guidelines and color schemes</li>
+          <li>Deliver fully documented and validated custom modules ready for regulatory inspection</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>⚡ Interactive Drill-Down &amp; JavaScript-Powered Analytics</h3>
+        <span class="meta meta--pop">Click, Explore, Discover - Next-Generation Clinical Intelligence</span>
+        <ul class="desc svc-list">
+          <li>Build multi-level drill-down systems: summary → cohort → individual patient with seamless navigation</li>
+          <li>Embed JavaScript-powered visualizations using Plotly, D3.js, Highcharts for publication-quality graphics</li>
+          <li>Implement clickable adverse event hierarchies: SOC → HLGT → PT with instant patient listings</li>
+          <li>Create interactive patient profiles with synchronized timelines, lab values, and treatment history</li>
+          <li>Deploy real-time filtering and brushing across linked visualizations for exploratory analysis</li>
+          <li>Add custom tooltips and annotations with patient-level details accessible on hover/click</li>
+          <li>Enable dynamic report generation capturing user interactions and filter states for reproducibility</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>💼 Value Proposition</h3>
+        <span class="meta meta--pop">Accelerate Insights, Reduce Timelines, Ensure Compliance</span>
+        <ul class="desc svc-list">
+          <li><strong>Speed to insights:</strong> Reduce dashboard development time by 60-80% vs. custom Shiny builds</li>
+          <li><strong>Regulatory-ready:</strong> Built-in validation framework meeting FDA/EMA electronic submission requirements</li>
+          <li><strong>Cost-effective:</strong> Leverage open-source pharmaverse ecosystem with enterprise support</li>
+          <li><strong>Scalable:</strong> Modular architecture grows from pilot studies to multi-study portfolios</li>
+          <li><strong>User empowerment:</strong> Enable clinical teams to explore data without programming knowledge</li>
+          <li><strong>Future-proof:</strong> Active community support and continuous updates from pharmaverse contributors</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>🎯 Industries &amp; Use Cases</h3>
+        <ul class="desc svc-list">
+          <li><strong>Pharmaceutical companies:</strong> Phase I-IV trial monitoring and regulatory submissions</li>
+          <li><strong>Biotech startups:</strong> Rapid dashboard deployment for investor presentations and data reviews</li>
+          <li><strong>CROs:</strong> Standardized reporting platforms across multiple client trials</li>
+          <li><strong>Academic medical centers:</strong> Investigator-initiated trials and real-world evidence studies</li>
+          <li><strong>Regulatory agencies:</strong> Interactive review tools for submission assessment</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>📊 Technical Differentiators</h3>
+        <ul class="desc svc-list">
+          <li><strong>Full-stack expertise:</strong> R/Shiny + JavaScript + validation + CDISC standards</li>
+          <li><strong>End-to-end delivery:</strong> Requirements gathering → development → validation → deployment → training</li>
+          <li><strong>Proven methodology:</strong> Agile development with 2-week sprint cycles and continuous stakeholder feedback</li>
+          <li><strong>Knowledge transfer:</strong> Comprehensive documentation and team training for sustainable maintenance</li>
+          <li><strong>Ongoing support:</strong> Post-deployment optimization, troubleshooting, and feature enhancements</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>📊 Case Studies</h3>
+        <h4>Teal Dashboard Build (from 0 to 20 Modules in less than a month)</h4>
+        <p><strong>Situation:</strong> Needed a full Teal dashboard built rapidly from scratch.</p>
+        <ul class="desc svc-list">
+          <li><strong>Work:</strong> Implemented Teal dashboard architecture and delivered 20 modules</li>
+          <li><strong>Impact:</strong> Delivered in under one month</li>
+        </ul>
+        <h4>Teal Framework Migration</h4>
+        <p><strong>Situation:</strong> Existing in-house visualizations and reports needed to move to Teal.</p>
+        <ul class="desc svc-list">
+          <li><strong>Work:</strong> Re-implemented visualizations and reports within Teal with validated components</li>
+          <li><strong>Impact:</strong> Standardized delivery and validation across modules</li>
+        </ul>
+        <h4>Wrap Teal Modules around JavaScript Visualizations</h4>
+        <ul class="desc svc-list">
+          <li><a href="https://teal-gsm-safety-teal.share.connect.posit.cloud" target="_blank" rel="noopener">gsm safety &#8599;</a></li>
+        </ul>
+      </div>
       </div>
     </div>
   </section>
@@ -649,27 +731,36 @@
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">Experiments &amp; tools</p>
-          <h2 class="sec-title" id="lab-h">AI Lab</h2>
+          <h2 class="sec-title" id="lab-h">Deployed Apps</h2>
         </div>
       </div>
+
+      <p class="csnote reveal">Self-deployed R/Pharmaverse/Teal/Shiny apps with clinical trial data: </p>
+
       <div class="cards" style="margin-top:30px;">
-        <a class="card reveal" href="lab/em-dash-ipsum.html">
-          <span class="meta meta--pop">Tool &middot; Play &nbsp;/&nbsp; 2026</span>
-          <h3>Em-Dash Ipsum</h3>
-          <p class="desc">Wall-to-wall em-dashes, &ldquo;it&rsquo;s-not-X, it&rsquo;s-Y,&rdquo; and even a T-1000 setting with tasteful quotes. Fresh from your favorite AI; copy, paste, done.</p>
-          <span class="go">Generate some <span class="ar" aria-hidden="true">&#8594;</span></span>
+        <a class="card reveal" href="https://dror.shinyapps.io/exploratory_1/" target="_blank" rel="noopener">
+          <span class="meta meta--pop">Teal app </span>
+          <h3>Exploratory analysis</h3>
+          <p class="desc">Source: Pharmaverse</p>
+          <span class="go">Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
         </a>
-        <a class="card reveal" href="lab/the-dashinator.html">
-          <span class="meta meta--pop">Tool &middot; Making of &nbsp;/&nbsp; 2026</span>
-          <h3>The Dashinator</h3>
-          <p class="desc">A (fictional) browser extension that converts every hyphen on the web into a glorious em-dash. The making-of write-up, as a page-format example.</p>
-          <span class="go">Read the making-of <span class="ar" aria-hidden="true">&#8594;</span></span>
+        <a class="card reveal" href="https://dror.shinyapps.io/safety_2/" target="_blank" rel="noopener">
+          <span class="meta meta--pop">Teal app </span>
+          <h3>Safety</h3>
+          <p class="desc">Source: Pharmaverse</p>
+          <span class="go">Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
         </a>
-        <a class="card card--invite email reveal" data-user="info" data-domain="drorberel.com" href="#">
-          <span class="meta meta--pop">Got an idea?</span>
-          <h3>Send it</h3>
-          <p class="desc">This section is small things made with AI. Suggestions, collaborations, and gloriously dumb works-in-progress all welcome.</p>
-          <span class="go">Get in touch <span class="ar" aria-hidden="true">&#8594;</span></span>
+        <a class="card reveal" href="https://dror.shinyapps.io/efficacy_3/" target="_blank" rel="noopener">
+          <span class="meta meta--pop">Teal app </span>
+          <h3>Efficacy</h3>
+          <p class="desc">Source: Pharmaverse</p>
+          <span class="go">Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
+        </a>
+        <a class="card reveal" href="https://teal-gsm-safety-teal.share.connect.posit.cloud" target="_blank" rel="noopener">
+          <span class="meta meta--pop">Teal app gsm</span>
+          <h3>Safety (gsm)</h3>
+          <p class="desc">Inhouse Safety modules, This wrapper around GSM-Safety JS modules</p>
+          <span class="go">Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
         </a>
       </div>
     </div>
@@ -683,73 +774,35 @@
           <p class="eyebrow">Case studies &amp; timeline</p>
           <h2 class="sec-title" id="work-h">Selected Work</h2>
         </div>
-        <!-- Add your résumé to /assets/resume.pdf, or change this link. -->
-        <a class="resume-link" href="assets/resume.pdf">
-          <span class="ic" aria-hidden="true">&#8595;</span> Full r&eacute;sum&eacute; (PDF)
-        </a>
       </div>
 
-      <p class="csnote reveal">Some work lives behind a velvet rope. Want a look? <a class="email" data-user="info" data-domain="drorberel.com" href="#">Send a note</a> for the password &mdash; the demo password is <b>demo</b>.</p>
-
-      <div class="csgrid reveal" aria-label="Case studies">
-        <a class="cscard" href="work/case-study.html">
-          <span class="cscard__co">Placeholder Co</span>
-          <span class="cscard__t">A gated case study</span>
-          <span class="cscard__d">This is the password-protected case-study format. Try it&mdash;the demo password is <b>demo</b>.</span>
-          <span class="cscard__go"><span class="lock" aria-hidden="true">&#128274;</span> Open case study <span class="ar" aria-hidden="true">&#8594;</span></span>
-        </a>
-        <a class="cscard" href="work/case-study.html">
-          <span class="cscard__co">Your Employer</span>
-          <span class="cscard__t">Duplicate this card per study</span>
-          <span class="cscard__d">Copy work/case-study.html, change the copy and password hash, point a card here.</span>
-          <span class="cscard__go"><span class="lock" aria-hidden="true">&#128274;</span> Open case study <span class="ar" aria-hidden="true">&#8594;</span></span>
-        </a>
-      </div>
-
-      <div class="cases">
-
-        <article class="case reveal">
-          <div class="case__top">
-            <span class="case__co">Recent Co</span>
-            <span class="case__yr">20XX &ndash; Present</span>
-          </div>
-          <p class="case__role">Your Title Here &nbsp;&middot;&nbsp; City, ST</p>
-          <p class="case__hook">
-            <span class="num">[Your headline result]</span> from the thing you led &mdash; it&rsquo;s not a bullet list, it&rsquo;s a <em>headline</em>, and it earns the eyeballs before the details do.
-          </p>
-          <ul class="case__pts">
-            <li>Led a <b>flagship initiative</b> &mdash; what it was, who it served, and the scale you took it to. The bold bits carry the skim; the rest rewards the reader who slows down.</li>
-            <li>Built and ran a <b>program</b> that moved a number you care about &mdash; quantify it, then say what changed because of it.</li>
-            <li>Shipped a thing that became the <b>standard</b> &mdash; adoption, reach, the part where it outlived you.</li>
-            <li>Managed <b>[N] people</b> across an org of <b>[size]</b> &mdash; span of control, in plain numbers.</li>
+      <div class="work-boxes reveal">
+        <div class="work-box">
+          <h3>Code examples</h3>
+          <ul class="work-list">
+            <li><a href="https://drorberel.github.io/ComplexHeatmapTeal/" target="_blank" rel="noopener">ComplexHeatmap + Teal</a> &mdash; Demonstration of integrating HtmlWidget JS wrapper visualizations into Teal apps</li>
+            <li><a href="https://github.com/drorberel/shiny_workshop" target="_blank" rel="noopener">shiny_workshop</a></li>
+            <li><a href="https://github.com/drorberel/Bioc2mlr" target="_blank" rel="noopener">Bioc2mlr</a> &mdash; Biomarker discovery pipeline for multi-omics data using Bioconductor and mlr3</li>
+            <li><a href="https://github.com/drorberel/JDRFCAV" target="_blank" rel="noopener">JDRFCAV</a> &mdash; Multi-modal data integration and analysis framework for clinical trial data, including high throughput omics data</li>
           </ul>
-        </article>
-
-        <article class="case reveal">
-          <div class="case__top">
-            <span class="case__co">Earlier Co</span>
-            <span class="case__yr">20XX &ndash; 20XX</span>
-          </div>
-          <p class="case__role">A Previous Title &nbsp;&middot;&nbsp; City, ST</p>
-          <p class="case__hook">
-            <span class="num">[One-line scope]</span> &mdash; the kind of opener that signals the size of the job without making the reader work for it.
-          </p>
-          <ul class="case__pts">
-            <li>Delivered <b>[the big thing]</b> &mdash; one clause for what, one for the dent it made in the universe.</li>
-            <li>Owned a budget / team / region of <b>[some notable size]</b> &mdash; concrete beats vague, every time.</li>
-            <li>Saved or earned <b>[$X]</b> &mdash; money is the most legible bullet you have; spend it early.</li>
-          </ul>
-        </article>
-
-        <div class="case__earlier reveal">
-          <span class="lbl">Earlier &nbsp;&middot;&nbsp; 2010&ndash;2019</span>
-          <span class="desc">
-            <b>Roles:</b> The titles that got you here, comma-separated.
-            <b>Companies:</b> A tidy list of logos people recognize.
-            <b>Clients/brands:</b> The names that add credibility without needing their own card.
-          </span>
         </div>
-
+        <div class="work-box">
+          <h3>Conference Talks</h3>
+          <p class="work-intro">Selected recordings from professional conferences:</p>
+          <ul class="work-list">
+            <li><a href="https://www.youtube.com/watch?v=9agO0o2gP68" target="_blank" rel="noopener">Refactor or Preserve? Challenging 'If It Ain't Broken, Don't Fix It' Mindset in Shiny App Lifecycle</a></li>
+            <li><a href="https://www.youtube.com/watch?v=-N2awS0g2oo" target="_blank" rel="noopener">High-level, module-based R/Shiny apps with Teal</a></li>
+            <li><a href="https://www.youtube.com/watch?v=nWUbsZa10aE" target="_blank" rel="noopener">Not Invented Here! Balancing unique software needs vs out-of-box (almost) perfect generic solution</a></li>
+          </ul>
+        </div>
+        <div class="work-box">
+          <h3>Writing</h3>
+          <ul class="work-list">
+            <li><strong>Teal App Development in Pharmaverse</strong> &mdash; Practical patterns for Teal app development. <a href="https://pharmaverse.github.io/blog/posts/2024-07-22_teal_app_development_pharmaverseadam/teal-app-development.html" target="_blank" rel="noopener">Read &#8599;</a></li>
+            <li><a href="https://drorberel.medium.com/" target="_blank" rel="noopener">Blog on Medium &#8599;</a></li>
+            <li><a href="https://drorberel.substack.com/" target="_blank" rel="noopener">Blog on Substack &#8599;</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -759,22 +812,58 @@
     <div class="inner">
       <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">Off the clock</p>
-          <h2 class="sec-title" id="personal-h">Personal</h2>
+          <h2 class="sec-title" id="personal-h">Resume</h2>
         </div>
       </div>
-      <p class="bio reveal">
-        The part where you&rsquo;re a person, not a deliverable. Maybe you take photos&mdash;maybe you garden, run absurd distances, restore synthesizers, or keep a list of every dog you&rsquo;ve ever met. It&rsquo;s not a distraction from the work; it&rsquo;s the <span class="hl">texture</span> that makes the work yours.
-      </p>
-      <!-- These are placeholder outbound links. Point them anywhere — or delete the ones you don't need. -->
-      <div class="listen reveal">
-        <a href="#" target="_blank" rel="noopener">Reading list <span class="ar" aria-hidden="true">&#8599;</span></a>
-        <a href="#" target="_blank" rel="noopener">Photos <span class="ar" aria-hidden="true">&#8599;</span></a>
-        <a href="#" target="_blank" rel="noopener">Newsletter <span class="ar" aria-hidden="true">&#8599;</span></a>
-        <a href="#" target="_blank" rel="noopener">Now page <span class="ar" aria-hidden="true">&#8599;</span></a>
+
+      <!-- Add your résumé to /assets/resume.pdf, or change this link. -->
+      <a class="resume-link reveal" href="www/Berel_Dror_Resume_pharma.pdf" style="display:flex;width:fit-content;margin-left:auto;">
+        <span class="ic" aria-hidden="true">&#8595;</span> Full r&eacute;sum&eacute; (PDF)
+      </a>
+      <div class="work-boxes reveal">
+        <div class="work-box">
+          <h3>Bio-Statistician &middot; R Developer &middot; RWE Researcher &middot; HEOR</h3>
+        </div>
+        <div class="work-box">
+          <h3>Core Strengths</h3>
+          <ul class="work-list">
+            <li>R / Shiny</li>
+            <li>SAS</li>
+            <li>Statistical Methods for Biomarker Discovery</li>
+            <li>Machine Learning (ML)</li>
+            <li>Causal Inference</li>
+            <li>Web Apps / Dashboards</li>
+            <li>CDISC / ADaM</li>
+            <li>Pharmaverse/TEAL</li>
+            <li>LLM: Tool calling, Validated agents, Harness Optimization</li>
+          </ul>
+        </div>
+        <div class="work-box">
+          <h3>Technical Summary</h3>
+          <ul class="work-list">
+            <li><strong>Coding &amp; languages:</strong> R, Python, SAS, cross-language interface tools (reticulate, rpy2)</li>
+            <li><strong>Statistical models:</strong> Machine learning (multivariable analysis), causal inference, Bayesian analysis, deep learning</li>
+            <li><strong>Data management &amp; databases:</strong> SQL, Apache Spark, Azure, AWS, Databricks, multi-modal data, relational databases, GIS, JSON, RStudio Connect, CI/CD</li>
+            <li><strong>DevOps:</strong> Git, web applications via REST API and Shiny dashboards, Docker, Unix, Linux</li>
+          </ul>
+        </div>
+        <div class="work-box">
+          <h3>Experience at a glance</h3>
+          <ul class="work-list">
+            <li><strong>Freelance Statistical Consultant</strong> (2022&ndash;current) &mdash; Regeneron, Sarepta, Biomea Fusion and other biotech clients</li>
+            <li><strong>Providence</strong> &mdash; Lead Data Scientist (via Valence)</li>
+            <li><strong>Fred Hutchinson Cancer Research Center</strong> &mdash; Senior Statistician</li>
+            <li><strong>University of Washington</strong> &mdash; Data Science Instructor</li>
+            <li><strong>USC Keck School of Medicine</strong> and <strong>Cedars-Sinai Medical Center</strong> &mdash; Senior Statistician</li>
+          </ul>
+        </div>
+        <figure class="career-img reveal">
+          <img src="www/career-vertical.jpg" width="768" height="1376" alt="Career timeline" loading="lazy" decoding="async" style="display:block;max-width:100%;max-width:min(100%,480px);height:auto;margin:0 auto;border-radius:14px;">
+        </figure>
+
       </div>
-      <a class="personal-link reveal" href="#" target="_blank" rel="noopener">
-        your-other-thing.com <span aria-hidden="true">&#8599;</span>
+      <a class="personal-link reveal" href="https://drorberel.github.io/" target="_blank" rel="noopener">
+        My old github page <span aria-hidden="true">&#8599;</span>
       </a>
     </div>
   </section>
@@ -788,9 +877,8 @@
         Let&rsquo;s talk.<br><a class="email" data-user="info" data-domain="drorberel.com" data-show="true" href="#">email me</a>
       </p>
       <div class="meta">
-        <p><a href="https://www.linkedin.com/in/dror-berel" target="_blank" rel="noopener">linkedin.com/in/dror-berel &#8599;</a></p>
         <div class="contact-links">
-          <a class="contact-row" href="mailto:Dror.Berel@gmail.com">Dror.Berel@gmail.com</a>
+          <a class="contact-row" href="mailto:info@drorberel.com">info@drorberel.com</a>
           <a class="contact-row" href="https://github.com/drorberel" target="_blank" rel="noopener">GitHub &#8599;</a>
           <a class="contact-row" href="https://www.linkedin.com/in/dror-berel" target="_blank" rel="noopener">LinkedIn &#8599;</a>
           <a class="contact-row" href="https://bsky.app/profile/bazingar.bsky.social" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.799-1.131 7.823-4.341 1.024 3.21 2.81 9.531 7.823 4.341 4.556-5.073 1.082-6.498-2.83-7.078a13.32 13.32 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>Bluesky &#8599;</a>
@@ -966,7 +1054,7 @@
     "Swap the words; keep the bones."
   ]);
   var wordObj = makeRoll(document.getElementById('wordroll'), [
-    "em-dash","semicolon","Oxford comma","ellipsis","interrobang"
+    "R", "Pharmaverse", "Teal", "RBQM / QTL", "Shiny", "LLM", "CDISC", "OMOP-CDM"
   ]);
   var rollTimer = null;
   function startRolls(){

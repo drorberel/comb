@@ -1,0 +1,99 @@
+
+
+::: {.band}
+## 🚀 Rapid Deployment & Implementation
+
+*From Zero to Production in Weeks - Not Months*
+
+- Deploy fully validated Teal dashboards for Phase I-IV clinical trials with industry-standard modules
+- Implement out-of-the-box safety tables (AE summaries, lab trends, exposure analysis) compliant with ICH-E3 guidelines
+- Configure efficacy endpoints modules (time-to-event, binary outcomes, longitudinal analyses) for regulatory submissions
+- Integrate CDISC-compliant datasets (SDTM, ADaM) with automated validation and quality checks
+- Adapt Teal framework to non-standard data sources: real-world evidence, patient registries, observational studies
+- Deliver GxP-validated environments with complete Installation/Operational Qualification documentation
+:::
+
+::: {.band .band-alt}
+## 🎨 Custom Module Development & Unique Visualizations
+
+*Bring Your Vision to Life - Bespoke Clinical Visualizations*
+
+- Design custom patient journey timelines showing treatment progression, dose modifications, and clinical events
+- Build advanced waterfall plots with RECIST criteria, biomarker overlays, and response annotations
+- Create interactive swimmer plots displaying multi-therapy timelines, adverse events, and disease milestones
+- Develop proprietary in-house modules tailored to your therapeutic area (oncology, cardiology, rare diseases)
+- Package reusable module libraries for standardized company-wide reporting frameworks
+- Implement branded dashboards matching corporate design guidelines and color schemes
+- Deliver fully documented and validated custom modules ready for regulatory inspection
+:::
+
+::: {.band}
+## ⚡ Interactive Drill-Down & JavaScript-Powered Analytics
+
+*Click, Explore, Discover - Next-Generation Clinical Intelligence*
+
+- Build multi-level drill-down systems: summary → cohort → individual patient with seamless navigation
+- Embed JavaScript-powered visualizations using Plotly, D3.js, Highcharts for publication-quality graphics
+- Implement clickable adverse event hierarchies: SOC → HLGT → PT with instant patient listings
+- Create interactive patient profiles with synchronized timelines, lab values, and treatment history
+- Deploy real-time filtering and brushing across linked visualizations for exploratory analysis
+- Add custom tooltips and annotations with patient-level details accessible on hover/click
+- Enable dynamic report generation capturing user interactions and filter states for reproducibility
+:::
+
+::: {.band .band-alt}
+## 💼 Value Proposition
+
+*Accelerate Insights, Reduce Timelines, Ensure Compliance*
+
+- **Speed to insights:** Reduce dashboard development time by 60-80% vs. custom Shiny builds
+- **Regulatory-ready:** Built-in validation framework meeting FDA/EMA electronic submission requirements
+- **Cost-effective:** Leverage open-source pharmaverse ecosystem with enterprise support
+- **Scalable:** Modular architecture grows from pilot studies to multi-study portfolios
+- **User empowerment:** Enable clinical teams to explore data without programming knowledge
+- **Future-proof:** Active community support and continuous updates from pharmaverse contributors
+:::
+
+::: {.band}
+## 🎯 Industries & Use Cases
+
+- **Pharmaceutical companies:** Phase I-IV trial monitoring and regulatory submissions
+- **Biotech startups:** Rapid dashboard deployment for investor presentations and data reviews
+- **CROs:** Standardized reporting platforms across multiple client trials
+- **Academic medical centers:** Investigator-initiated trials and real-world evidence studies
+- **Regulatory agencies:** Interactive review tools for submission assessment
+:::
+
+::: {.band .band-alt}
+## 📊 Technical Differentiators
+
+- **Full-stack expertise:** R/Shiny + JavaScript + validation + CDISC standards
+- **End-to-end delivery:** Requirements gathering → development → validation → deployment → training
+- **Proven methodology:** Agile development with 2-week sprint cycles and continuous stakeholder feedback
+- **Knowledge transfer:** Comprehensive documentation and team training for sustainable maintenance
+- **Ongoing support:** Post-deployment optimization, troubleshooting, and feature enhancements
+:::
+
+
+
+::: {.band .band-alt}
+## 📊 Case Studies
+
+### Teal Dashboard Build (from 0 to 20 Modules in less than a month)
+
+**Situation:** Needed a full Teal dashboard built rapidly from scratch.
+
+- **Work:** Implemented Teal dashboard architecture and delivered 20 modules
+- **Impact:** Delivered in under one month
+
+### Teal Framework Migration
+
+**Situation:** Existing in-house visualizations and reports needed to move to Teal.
+
+- **Work:** Re-implemented visualizations and reports within Teal with validated components
+- **Impact:** Standardized delivery and validation across modules
+
+### Wrap Teal Modules around JavaScript Visualizations
+- [gsm safety](https://teal-gsm-safety-teal.share.connect.posit.cloud)
+
+:::

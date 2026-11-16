@@ -1,0 +1,38 @@
+---
+title: "Projects"
+---
+
+## Deployed Apps
+
+Self-deployed R/Pharmaverse/Teal/Shiny apps with clinical trial data:
+
+- [Exploratory analysis - Teal](https://dror.shinyapps.io/exploratory_1/)
+- [Safety - Teal](https://dror.shinyapps.io/safety_2/)
+- [Efficacy - Teal](https://dror.shinyapps.io/efficacy_3/)
+- [Safety - gsm](https://teal-gsm-safety-teal.share.connect.posit.cloud)
+
+## Code Examples
+
+Code examples:
+
+- [ComplexHeatmap + Teal](https://drorberel.github.io/ComplexHeatmapTeal/) - Demonstration of integrating HtmlWidget JS wrapper visualizations into Teal apps
+- [shiny_workshop](https://github.com/drorberel/shiny_workshop)
+- [Bioc2mlr](https://github.com/drorberel/Bioc2mlr) - Biomarker discovery pipeline for multi-omics data using Bioconductor and mlr3
+- [JDRFCAV](https://github.com/drorberel/JDRFCAV) - Multi-modal data integration and analysis framework for clinical trial data, including high throughput omics data
+
+## Conference Talks
+
+Selected recordings from professional conferences:
+
+- [Refactor or Preserve? Challenging 'If It Ain't Broken, Don't Fix It' Mindset in Shiny App Lifecycle](https://www.youtube.com/watch?v=9agO0o2gP68)
+- [High-level, module-based R/Shiny apps with Teal](https://www.youtube.com/watch?v=-N2awS0g2oo)
+- [Not Invented Here! Balancing unique software needs vs out-of-box (almost) perfect generic solution](https://www.youtube.com/watch?v=nWUbsZa10aE)
+
+
+## Writing
+
+- **Teal App Development in Pharmaverse** — Practical patterns for Teal app development. [Read](https://pharmaverse.github.io/blog/posts/2024-07-22_teal_app_development_pharmaverseadam/teal-app-development.html)
+
+- <a class="contact-row" href="https://drorberel.medium.com/"><i class="bi bi-medium" aria-hidden="true"></i><span>Blog on Medium</span></a>
+- <a class="contact-row" href="https://drorberel.substack.com/"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08zM1.46 10.5h21.08v10.652L11.999 14.86l-10.539 6.292zM22.539 0H1.45V2.74h21.09z"/></svg><span>Blog on Substack</span></a>
+

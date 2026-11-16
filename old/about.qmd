@@ -1,0 +1,108 @@
+---
+title: "About"
+---
+
+
+::: {#about-intro}
+![](www/Dror portrait - CS small.jpg){fig-align="right" width=20%}
+
+## Bio-Statistician · R Developer · RWE Researcher · HEOR {.about-title}
+
+
+
+:::
+
+## Core Strengths
+
+- R / Shiny
+- SAS 
+- Statistical Methods for Biomarker Discovery
+- Machine Learning (ML) · Causal Inference
+- Web Apps / Dashboards
+- CDISC / ADaM
+- Pharmaverse/TEAL
+- LLM: Tool call, Validated agents, Harness Optimization
+
+## Technical Summary
+
+| Area | Tools & Skills |
+|------|----------------|
+| Coding & languages | R, Python, SAS, cross-language interface tools (reticulate, rpy2) |
+| Statistical models | Machine learning (multivariable analysis), causal inference, Bayesian analysis, deep learning |
+| Data management & databases | SQL, Apache Spark, Azure, AWS, Databricks, multi-modal data, relational databases, GIS, JSON, RStudio Connect, CI/CD |
+| DevOps | Git, web applications via REST API and Shiny dashboards, Docker, Unix, Linux |
+
+
+## Experience at a glance
+
+- **Freelance Statistical Consultant** (2022–current) — Regeneron, Sarepta, Biomea Fusion and other biotech clients
+- **Providence** — Lead Data Scientist (via Valence)
+- **Fred Hutchinson Cancer Research Center** — Senior Statistician
+- **University of Washington** — Data Science Instructor
+- **USC Keck School of Medicine** and **Cedars-Sinai Medical Center** — Senior Statistician
+
+::: {.img-block}
+![](www/career-vertical.jpg){fig-align="center"}
+:::
+
+## Detailed Professional Experience
+
+### Freelance Statistical Consultant — 4/2022–current
+
+*Past clients: Regeneron, Sarepta Therapeutics, Biomea Fusion and other small/mid-size biotech companies*
+
+- Reviewing, modifying and reformatting clinical data (CDISC, ADaM, TLGs). Automating analytical pipelines from SAS to R, including Quarto/Markdown deliverables, Shiny apps (Teal, Rhino, Modules), and REST APIs.
+- Authoring Real World Evidence (RWE) data analysis and documentation. Power analysis, design of experiments, and biomarker discovery.
+- Consistently delivered CDISC-compliant datasets ahead of schedule for multiple regulatory submissions.
+- Achieved high first-pass acceptance rates with regulatory authorities across various therapeutic areas.
+- Developed automated validation procedures that significantly enhanced data integrity and quality control.
+- Implemented advanced monitoring systems and statistical programming techniques for complex trial designs.
+- Created standardized programming templates that improved efficiency and reduced analysis timelines.
+- R tools: Pharmaverse / Open Pharma / PHUSE / Bioconductor packages: tern, hermes, falcon, admiral, ...
+
+### Providence — Lead Data Scientist (via Valence), 4/2021–3/2022
+
+- Designed and deployed machine learning models for predictive financial outcomes. Implemented analytical pipelines for health insurance data, including optimized revenue cycle management and claims process. Defined actionable KPIs and business metrics integrated into production environments and software products.
+- Delivered comprehensive Health Economics and Outcomes Research (HEOR) deliverables utilizing key healthcare data systems including EHR, medical coding standards (CPT, ICD, DRG, NDC), and revenue cycle management codes (RARC). Integrated clinical, administrative, and financial healthcare data to support evidence-based decision-making for pharmaceutical companies, health systems, and payers.
+- Partnered with business leaders, domain experts, and end-users to gain business understanding, data understanding, and collect requirements. Oversaw cost-effective support of projects across a team of data analysts, data engineers, and DevOps.
+- Led and mentored a group of data scientists as a technical resource manager with a boutique consulting firm.
+
+### eBay — Senior Data Scientist, 5/2019–3/2021
+
+- Led experimentation and analysis projects as a go-to data science partner for cross-functional teams; improved solution design, business management, and communications.
+- Replaced a broken, manual analytics solution with an automated, repeatable, scalable solution with robust data curation, wrangling, modeling, and reporting capabilities, including alerts for outliers and calibration loss; quickened analytical pipeline processing time from weeks to on-demand.
+- Created a best-practices playbook for coding and analytics (e.g., SQL queries, statistical methods, reporting standards, data modeling, dashboards), promoting a collaborative, cohesive work environment; set practice standards for reproducibility and knowledge transfer for the entire analytics team.
+
+### Fred Hutchinson Cancer Research Center — Senior Statistician, 9/2016–5/2019
+
+- Designed a novel feature-engineering technique for a machine learning framework with multi-modal high-throughput data; conducted meta-analysis of complex nested annotated datasets using object-oriented classes ([github.com/FredHutch/JDRFCAV](https://github.com/FredHutch/JDRFCAV)).
+- Developed a scalable and adaptable predictive model utilizing data from multiple sources and annotation systems, leveraging open-source ML packages and enabling a centralized data structure to ease testing; authored a peer-reviewed paper and presented methodology and findings to clinical, medical, and statistics experts.
+
+### University of Washington — Data Science Instructor, 10/2018–11/2019
+
+- Planned and led courses in statistics, machine learning, and data science within the Professional & Continuing Education program; mentored students from technical and non-technical backgrounds.
+- Taught scientific workflow (observation, hypothesis, experimentation, analytics, reports), descriptive and exploratory analysis, inferential statistics, and machine learning (supervised/unsupervised ML, resampling & cross-validation, model performance estimation).
+
+### University of Southern California (USC) — Keck School of Medicine, Senior Statistician, 10/2013–8/2016
+
+- Led statistical analysis of multi-modal genomic data, delivering a 10% accuracy increase for predictive diagnostic biomarkers compared to classical methods.
+
+### Cedars-Sinai Medical Center — Senior Statistician, 3/2009–9/2013
+
+- Developed software packages for adaptive early-phase clinical trials using advanced Bayesian techniques; demonstrated ability to reduce sample size by 20%.
+
+## Education
+
+- University of Southern California (USC) — graduate-level coursework in Advanced Statistics
+- University of Houston (UH) — M.S. in Bioinformatics
+- Tel-Aviv University (TAU) — M.S. in Statistics & Operational Research
+- The Hebrew University of Jerusalem — B.S. in Statistics
+
+**Status:** U.S. Citizen
+
+## Contact
+
+- Email: [Dror.Berel\@gmail.com](mailto:Dror.Berel@gmail.com)
+- GitHub: [drorberel](https://github.com/drorberel)
+- LinkedIn: [dror-berel](https://www.linkedin.com/in/dror-berel)
+- Blog: [drorberel.medium.com](https://drorberel.medium.com/)
