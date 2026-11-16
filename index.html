@@ -195,7 +195,7 @@
   }
   .hero__img{
     position:absolute;top:8%;right:2%;
-    height:60%;width:auto;aspect-ratio:1/1;z-index:0;object-fit:cover;object-position:center;
+    height:60%;width:auto;aspect-ratio:571/800;z-index:0;object-fit:cover;object-position:center;
     -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);
     mask-image:linear-gradient(90deg,transparent 0%,#000 30%);
     will-change:transform;
@@ -403,7 +403,17 @@
     background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
     transition:border-color .2s ease,transform .2s ease,background .2s ease;
   }
+  .work-box{position:relative;isolation:isolate;}
+  .work-box::before{
+    content:"";position:absolute;z-index:-1;pointer-events:none;
+    width:360px;height:360px;border-radius:50%;
+    right:-100px;top:-140px;
+    background:radial-gradient(circle,var(--glow) 0%,transparent 68%);
+    opacity:0;filter:blur(40px);
+    transition:opacity .3s ease,transform .3s ease;
+  }
   .work-box:hover{border-color:var(--glow);transform:translateY(-3px);background:rgba(255,255,255,.045);}
+  .work-box:hover::before{opacity:.7;transform:translate(-14px,18px);}
   .work-box h3{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.18;margin:0 0 12px;}
   .work-intro{color:var(--muted);font-size:13.5px;margin:0 0 10px;}
   .work-list{list-style:none;padding:0;margin:0;}
@@ -761,6 +771,12 @@
           <h3>Safety (gsm)</h3>
           <p class="desc">Inhouse Safety modules, This wrapper around GSM-Safety JS modules</p>
           <span class="go">Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
+        </a>
+        <a class="card reveal" href="work/case-study.html">
+          <span class="meta meta--pop">New &nbsp;/&nbsp; Locked</span>
+          <h3>New</h3>
+          <p class="desc">reach out for more details</p>
+          <span class="go"><span class="lock" aria-hidden="true">&#128274;</span> Open app <span class="ar" aria-hidden="true">&#8594;</span></span>
         </a>
       </div>
     </div>
