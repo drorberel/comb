@@ -9,7 +9,7 @@
   ║   2. Replace the Em-Dash Ipsum copy (the silly em-dash-loving filler) ║
   ║      with your own words.                                             ║
   ║   3. Swap the cute-animal placeholders in /assets/aww for real art.   ║
-  ║   4. Update the email + social links (search: data-user / DrorBerel.com)║
+  ║   4. Update the email + social links (search: data-user / drorberel.com)║
   ║   5. Drop your analytics snippet where marked in <head>.             ║
   ║  License: MIT. Credit appreciated, never required. — see README.md   ║
   ╚══════════════════════════════════════════════════════════════════════╝
@@ -23,11 +23,11 @@
 <meta property="og:title" content="Dror Berel — portfolio">
 <meta property="og:description" content="An open-source single-page portfolio template — dark, motion-forward, and shamelessly in love with the em-dash.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://DrorBerel.com/">
-<meta property="og:image" content="https://DrorBerel.com/assets/og/home.jpg">
-<link rel="canonical" href="https://DrorBerel.com/">
+<meta property="og:url" content="https://drorberel.com/">
+<meta property="og:image" content="https://drorberel.com/assets/og/home.jpg">
+<link rel="canonical" href="https://drorberel.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://DrorBerel.com/assets/og/home.jpg">
+<meta name="twitter:image" content="https://drorberel.com/assets/og/home.jpg">
 
 <!-- ===== Analytics =====
      Left intentionally blank. Drop your own snippet here (GA4, Plausible,
@@ -41,22 +41,26 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://DrorBerel.com/#person",
+      "@id": "https://drorberel.com/#person",
       "name": "Dror Berel",
-      "url": "https://DrorBerel.com",
+      "url": "https://drorberel.com",
       "jobTitle": "What you do",
       "description": "One or two sentences about you. Em-dashes optional — but encouraged.",
       "sameAs": [
-        "https://www.linkedin.com/in/your-handle/"
+        "https://www.linkedin.com/in/dror-berel",
+        "https://github.com/drorberel",
+        "https://bsky.app/profile/bazingar.bsky.social",
+        "https://drorberel.medium.com/",
+        "https://drorberel.substack.com/"
       ]
     },
     {
       "@type": "WebSite",
-      "@id": "https://DrorBerel.com/#website",
-      "url": "https://DrorBerel.com",
+      "@id": "https://drorberel.com/#website",
+      "url": "https://drorberel.com",
       "name": "Dror Berel",
       "inLanguage": "en",
-      "publisher": { "@id": "https://DrorBerel.com/#person" }
+      "publisher": { "@id": "https://drorberel.com/#person" }
     }
   ]
 }
@@ -432,6 +436,9 @@
   footer .big a{color:var(--pop);text-decoration:none;}
   footer .meta{font-size:13px;color:var(--muted);text-align:right;}
   footer .meta a{color:var(--ink);}
+.contact-links{margin-top:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-end;}
+.contact-row{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;}
+.contact-row svg{flex:none;}
 
   /* ---- motion, gated behind reduced-motion preference ---- */
   @media (prefers-reduced-motion: no-preference){
@@ -545,8 +552,8 @@
   </div>
 
   <div class="foot">
-    <a class="email" data-user="DrorBerel" data-domain="DrorBerel.com" href="#">Contact</a>
-    <p class="tiny">yoursite.com</p>
+    <a class="email" data-user="info" data-domain="drorberel.com" href="#">Contact</a>
+    <p class="tiny">drorberel.com</p>
   </div>
 </nav>
 
@@ -658,7 +665,7 @@
           <p class="desc">A (fictional) browser extension that converts every hyphen on the web into a glorious em-dash. The making-of write-up, as a page-format example.</p>
           <span class="go">Read the making-of <span class="ar" aria-hidden="true">&#8594;</span></span>
         </a>
-        <a class="card card--invite email reveal" data-user="DrorBerel" data-domain="DrorBerel.com" href="#">
+        <a class="card card--invite email reveal" data-user="info" data-domain="drorberel.com" href="#">
           <span class="meta meta--pop">Got an idea?</span>
           <h3>Send it</h3>
           <p class="desc">This section is small things made with AI. Suggestions, collaborations, and gloriously dumb works-in-progress all welcome.</p>
@@ -682,7 +689,7 @@
         </a>
       </div>
 
-      <p class="csnote reveal">Some work lives behind a velvet rope. Want a look? <a class="email" data-user="DrorBerel" data-domain="DrorBerel.com" href="#">Send a note</a> for the password &mdash; the demo password is <b>demo</b>.</p>
+      <p class="csnote reveal">Some work lives behind a velvet rope. Want a look? <a class="email" data-user="info" data-domain="drorberel.com" href="#">Send a note</a> for the password &mdash; the demo password is <b>demo</b>.</p>
 
       <div class="csgrid reveal" aria-label="Case studies">
         <a class="cscard" href="work/case-study.html">
@@ -778,11 +785,19 @@
   <div class="inner">
     <div class="foot-grid">
       <p class="big">
-        Let&rsquo;s talk.<br><a class="email" data-user="DrorBerel" data-domain="DrorBerel.com" data-show="true" href="#">email me</a>
+        Let&rsquo;s talk.<br><a class="email" data-user="info" data-domain="drorberel.com" data-show="true" href="#">email me</a>
       </p>
       <div class="meta">
-        <p><a href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener">linkedin.com/in/your-handle &#8599;</a></p>
-        <p style="margin-top:14px;">yoursite.com &nbsp;/&nbsp; 2026</p>
+        <p><a href="https://www.linkedin.com/in/dror-berel" target="_blank" rel="noopener">linkedin.com/in/dror-berel &#8599;</a></p>
+        <div class="contact-links">
+          <a class="contact-row" href="mailto:Dror.Berel@gmail.com">Dror.Berel@gmail.com</a>
+          <a class="contact-row" href="https://github.com/drorberel" target="_blank" rel="noopener">GitHub &#8599;</a>
+          <a class="contact-row" href="https://www.linkedin.com/in/dror-berel" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+          <a class="contact-row" href="https://bsky.app/profile/bazingar.bsky.social" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.799-1.131 7.823-4.341 1.024 3.21 2.81 9.531 7.823 4.341 4.556-5.073 1.082-6.498-2.83-7.078a13.32 13.32 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>Bluesky &#8599;</a>
+          <a class="contact-row" href="https://drorberel.medium.com/" target="_blank" rel="noopener">Blog on Medium &#8599;</a>
+          <a class="contact-row" href="https://drorberel.substack.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08zM1.46 10.5h21.08v10.652L11.999 14.86l-10.539 6.292zM22.539 0H1.45V2.74h21.09z"/></svg>Blog on Substack &#8599;</a>
+        </div>
+        <p style="margin-top:14px;">drorberel.com &nbsp;/&nbsp; 2026</p>
         <!-- ╔══════════════════════════════════════════════════════════════════╗
              ║  ATTRIBUTION — please keep the credit line below.                 ║
              ║  Portfolio Starter is free and MIT-licensed; the one thing asked in   ║
