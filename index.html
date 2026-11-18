@@ -74,11 +74,11 @@
 
 <style>
   :root{
-    --bg:#0b0b0d;
-    --panel:#131419;
-    --ink:#f3f4f7;
-    --muted:#9498a3;
-    --line:#262833;
+    --bg:#ffffff;--link:#2456d6;
+    --panel:#f4f5f8;
+    --ink:#0b0d12;
+    --muted:#5d6370;
+    --line:#dcdfe6;
     --accent:#3f6fff;
     --pop:#3f6fff;
     transition:--pop .6s ease;
@@ -123,7 +123,7 @@
     width:220px;max-height:calc(100vh - 44px);overflow-y:auto;
     padding:24px 20px;z-index:100;
     display:flex;flex-direction:column;
-    background:rgba(18,19,25,.5);
+    background:rgba(186,230,253,.6);
     -webkit-backdrop-filter:blur(26px) saturate(180%);
     backdrop-filter:blur(26px) saturate(180%);
     border-radius:30px;
@@ -153,7 +153,7 @@
   .nav a{
     display:flex;align-items:center;gap:10px;
     padding:9px 12px;border-radius:11px;
-    font-size:15px;color:#aab0bd;text-decoration:none;
+    font-size:15px;color:#5d6370;text-decoration:none;
     background-image:linear-gradient(90deg,
       color-mix(in srgb,var(--pop) 24%,transparent) 0%,
       color-mix(in srgb,var(--pop) 24%,transparent) max(0%,calc(var(--p,0%) - 7%)),
@@ -169,7 +169,7 @@
   }
   .nav a[aria-current] .led{background:var(--pop);}
   .nav .ext{margin-left:auto;font-size:12px;color:var(--muted);}
-  .sidebar .foot{margin-top:20px;padding:18px 12px 0;border-top:1px solid rgba(255,255,255,.08);}
+  .sidebar .foot{margin-top:20px;padding:18px 12px 0;border-top:1px solid rgba(0,0,0,.08);}
   .sidebar .foot a{
     text-decoration:none;font-size:14px;color:var(--ink);
     border-bottom:2px solid var(--pop);padding-bottom:2px;
@@ -190,7 +190,7 @@
   .hero{
     position:relative;margin-left:calc(-1 * var(--nav-w));width:100vw;
     min-height:100vh;min-height:100lvh;display:flex;align-items:flex-start;
-    padding:0;overflow:hidden;background:#000;
+    padding:0;overflow:hidden;background:#ffffff;
     border-bottom:1px solid var(--line);
   }
   .hero__img{
@@ -205,8 +205,8 @@
   .hero__scrim{
     position:absolute;inset:0;z-index:1;
     background:
-      linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 34%,rgba(0,0,0,.12) 62%,rgba(0,0,0,0) 80%),
-      linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 30%);
+      linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.7) 34%,rgba(255,255,255,.1) 62%,rgba(255,255,255,0) 80%),
+      linear-gradient(0deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,0) 30%);
   }
   .hero .inner{
     position:relative;z-index:2;max-width:none;margin:0;width:100%;
@@ -217,7 +217,6 @@
   h1{
     font-family:var(--display);font-weight:800;
     font-size:clamp(38px,6vw,80px);line-height:1.04;letter-spacing:-.035em;
-    text-shadow:0 2px 24px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.5);
   }
   h1 .line{display:block;}
   h1 .word{display:inline-block;}
@@ -227,8 +226,7 @@
   br.mb{display:none;}
   .hero-sub{
     margin-top:28px;font-size:clamp(17px,1.8vw,22px);
-    color:#e6e8ee;max-width:42ch;
-    text-shadow:0 1px 12px rgba(0,0,0,.6),0 1px 2px rgba(0,0,0,.5);
+    color:#3a3f4b;max-width:42ch;
   }
   .scrollcue{
     position:absolute;z-index:2;bottom:34px;
@@ -274,7 +272,7 @@
     padding:24px;text-decoration:none;display:flex;flex-direction:column;
     min-height:214px;transition:transform .22s ease,border-color .22s ease;
   }
-  .card:hover{transform:translateY(-5px);border-color:#3a3d4a;}
+  .card:hover{transform:translateY(-5px);border-color:#b8bcc7;}
   .card .meta{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;}
   .card .meta--pop{color:var(--pop);}
   .card h3{
@@ -295,7 +293,7 @@
     border-radius:11px;padding:11px 16px;
     transition:border-color .2s ease,color .2s ease,transform .2s ease;
   }
-  .resume-link:hover{border-color:var(--pop);color:var(--pop);transform:translateY(-2px);}
+  .resume-link:hover{border-color:#ff4f87;color:#ff4f87;transform:translateY(-2px);background:color-mix(in srgb,#ff4f87 22%,#ffffff);box-shadow:0 12px 28px -14px color-mix(in srgb,#ff4f87 80%,transparent);}
   .resume-link .ic{font-size:15px;}
 
   /* expanded case entries (public layer) — brand-tinted liquid glass */
@@ -304,7 +302,7 @@
     --glow:var(--pop);
     position:relative;isolation:isolate;overflow:hidden;
     border:1px solid var(--line);border-radius:16px;padding:30px 32px;
-    background:rgba(18,19,25,.46);
+    background:rgba(255,255,255,.46);
     -webkit-backdrop-filter:blur(22px) saturate(170%);
     backdrop-filter:blur(22px) saturate(170%);
     box-shadow:0 18px 44px -30px rgba(0,0,0,.7);
@@ -344,7 +342,7 @@
   .case__pts{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:11px;}
   .case__pts li{
     position:relative;padding-left:22px;font-size:15px;line-height:1.55;
-    color:#c3c7d0;max-width:70ch;
+    color:#3a3f4b;max-width:70ch;
   }
   .case__pts li::before{
     content:"";position:absolute;left:2px;top:9px;
@@ -382,12 +380,12 @@
   /* case-study spotlight strip (top of Selected Work) */
   .csgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px;}
   .cscard{
-    --glow:var(--pop);
+    --glow:#3f6fff;
     display:flex;flex-direction:column;gap:10px;min-height:148px;text-decoration:none;
-    background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px;
+    background:rgba(0,0,0,.025);border:1px solid var(--line);border-radius:18px;
     padding:22px 24px;transition:border-color .2s ease,transform .2s ease,background .2s ease;
   }
-  .cscard:hover{border-color:var(--glow);transform:translateY(-3px);background:rgba(255,255,255,.045);}
+  .cscard:hover{border-color:var(--glow);transform:translateY(-3px);background:color-mix(in srgb,var(--glow) 22%,#ffffff);box-shadow:0 16px 34px -16px color-mix(in srgb,var(--glow) 80%,transparent);}
   .cscard:focus-visible{outline-color:var(--glow);}
   .cscard__co{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--glow);}
   .cscard__t{
@@ -399,8 +397,8 @@
   .cscard__go .lock{font-size:11px;opacity:.7;flex:none;}
   .work-boxes{display:grid;gap:16px;margin-top:26px;}
   .work-box{
-    --glow:var(--pop);
-    background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
+    --glow:#8ab4ff;
+    background:rgba(0,0,0,.025);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
     transition:border-color .2s ease,transform .2s ease,background .2s ease;
   }
   .work-box{position:relative;isolation:isolate;}
@@ -412,8 +410,10 @@
     opacity:0;filter:blur(40px);
     transition:opacity .3s ease,transform .3s ease;
   }
-  .work-box:hover{border-color:var(--glow);transform:translateY(-3px);background:rgba(255,255,255,.045);}
+  .work-box:hover{border-color:var(--glow);transform:translateY(-3px);background:color-mix(in srgb,var(--glow) 22%,#ffffff);box-shadow:0 16px 34px -16px color-mix(in srgb,var(--glow) 80%,transparent);}
   .work-box:hover::before{opacity:.7;transform:translate(-14px,18px);}
+  #thinking .work-box{--glow:#ff8a8a;}
+  .work-box h4{font-size:15px;font-weight:600;line-height:1.4;margin:0 0 10px;color:var(--ink);}
   .work-box h3{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.18;margin:0 0 12px;}
   .work-intro{color:var(--muted);font-size:13.5px;margin:0 0 10px;}
   .work-list{list-style:none;padding:0;margin:0;}
@@ -421,7 +421,7 @@
   .work-list li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--pop);}
   .work-list a{color:var(--ink);}
   .cscard__go .ar{color:var(--glow);display:inline-block;transition:transform .2s ease;}
-  .cscard:hover .cscard__go{color:#d4d7df;}
+  .cscard:hover .cscard__go{color:#3a3f4b;}
   .cscard:hover .cscard__go .ar{transform:translateX(5px);}
   .csnote{margin-top:18px;line-height:1.6;color:var(--muted);}
   .csnote a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;transition:color .18s ease;}
@@ -440,7 +440,7 @@
   .listen a{
     display:inline-flex;align-items:center;gap:9px;
     padding:11px 18px;border-radius:999px;
-    background:rgba(18,19,25,.5);
+    background:rgba(255,255,255,.5);
     -webkit-backdrop-filter:blur(18px) saturate(170%);
     backdrop-filter:blur(18px) saturate(170%);
     border:1px solid var(--line);
@@ -496,16 +496,16 @@
     .sidebar,.case,.cscard,.listen a,.navtoggle{
       -webkit-backdrop-filter:none !important;backdrop-filter:none !important;
     }
-    .sidebar{background:rgba(18,19,25,.94);}
+    .sidebar{background:rgba(186,230,253,.94);}
     .case{background:var(--panel);}
     .listen a{background:var(--panel);}
-    .navtoggle{background:rgba(18,19,25,.94);}
+    .navtoggle{background:rgba(255,255,255,.94);}
 
     .navtoggle{
       display:flex;align-items:center;justify-content:center;
       position:fixed;top:16px;left:16px;z-index:120;
       width:46px;height:46px;border:0;border-radius:14px;cursor:pointer;
-      background:rgba(18,19,25,.62);
+      background:rgba(255,255,255,.62);
       -webkit-backdrop-filter:blur(22px) saturate(180%);
       backdrop-filter:blur(22px) saturate(180%);
       box-shadow:0 16px 36px -18px rgba(0,0,0,.8);
@@ -537,7 +537,7 @@
       -webkit-mask-image:none;mask-image:none;
     }
     .hero__scrim{
-      background:linear-gradient(180deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.55) 32%,rgba(0,0,0,0) 66%);
+      background:linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.7) 32%,rgba(255,255,255,0) 66%);
     }
     .hero .inner{padding-top:clamp(56px,9vh,96px);padding-left:24px;padding-right:24px;}
     br.mb{display:initial;}
@@ -545,6 +545,19 @@
     .scrollcue{left:24px;}
     .cards{grid-template-columns:1fr;}
     .csgrid{grid-template-columns:1fr;}
+  }
+  /* text links: readable blue on white */
+  .bio a,.post-body a,.csnote a,footer a,.sidebar .foot a,.listen a,.contact-row,.hero a,.post-foot a,.cta a{color:var(--link);}
+  .bio .hl,.work-box h3,.card .go,.card .go .ar{color:#0b0d12;}
+  footer .big,footer .big a{color:#0b0d12;}
+  footer .big a{text-decoration:underline;text-underline-offset:4px;}
+  /* stronger scroll-progress fill: reads on white */
+  .nav a{
+    background-image:linear-gradient(90deg,
+      #ffffff 0%,
+      #ffffff max(0%,calc(var(--p,0%) - 6%)),
+      #1e40af var(--p,0%),
+      transparent var(--p,0%));
   }
 </style>
 </head>
@@ -564,7 +577,7 @@
 
   <div class="nav">
     <a href="#who"><span class="led" aria-hidden="true"></span><span>Who</span></a>
-    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>Competence</span></a>
+    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>Case Studies</span></a>
     <a href="#lab"><span class="led" aria-hidden="true"></span><span>Deployed Apps</span></a>
     <a href="#work"><span class="led" aria-hidden="true"></span><span>Selected Work</span></a>
     <a href="#personal"><span class="led" aria-hidden="true"></span><span>Resume</span></a>
@@ -638,99 +651,36 @@
     <div class="inner">
       <div class="sec-head reveal">
         <div>
-          <h2 class="sec-title" id="thinking-h">Competence</h2>
+          <h2 class="sec-title" id="thinking-h">Case Studies</h2>
         </div>
       </div>
-      <div class="cards cards--two">
-      <div class="card reveal">
-        <h3>🚀 Rapidd Deployment &amp; Implementation</h3>
-        <span class="meta meta--pop">From Zero to Production in Weeks - Not Months</span>
-        <ul class="desc svc-list">
-          <li>Deploy fully validated Teal dashboards for Phase I-IV clinical trials with industry-standard modules</li>
-          <li>Implement out-of-the-box safety tables (AE summaries, lab trends, exposure analysis) compliant with ICH-E3 guidelines</li>
-          <li>Configure efficacy endpoints modules (time-to-event, binary outcomes, longitudinal analyses) for regulatory submissions</li>
-          <li>Integrate CDISC-compliant datasets (SDTM, ADaM) with automated validation and quality checks</li>
-          <li>Adapt Teal framework to non-standard data sources: real-world evidence, patient registries, observational studies</li>
-          <li>Deliver GxP-validated environments with complete Installation/Operational Qualification documentation</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>🎨 Custom Module Development &amp; Unique Visualizations</h3>
-        <span class="meta meta--pop">Bring Your Vision to Life - Bespoke Clinical Visualizations</span>
-        <ul class="desc svc-list">
-          <li>Design custom patient journey timelines showing treatment progression, dose modifications, and clinical events</li>
-          <li>Build advanced waterfall plots with RECIST criteria, biomarker overlays, and response annotations</li>
-          <li>Create interactive swimmer plots displaying multi-therapy timelines, adverse events, and disease milestones</li>
-          <li>Develop proprietary in-house modules tailored to your therapeutic area (oncology, cardiology, rare diseases)</li>
-          <li>Package reusable module libraries for standardized company-wide reporting frameworks</li>
-          <li>Implement branded dashboards matching corporate design guidelines and color schemes</li>
-          <li>Deliver fully documented and validated custom modules ready for regulatory inspection</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>⚡ Interactive Drill-Down &amp; JavaScript-Powered Analytics</h3>
-        <span class="meta meta--pop">Click, Explore, Discover - Next-Generation Clinical Intelligence</span>
-        <ul class="desc svc-list">
-          <li>Build multi-level drill-down systems: summary → cohort → individual patient with seamless navigation</li>
-          <li>Embed JavaScript-powered visualizations using Plotly, D3.js, Highcharts for publication-quality graphics</li>
-          <li>Implement clickable adverse event hierarchies: SOC → HLGT → PT with instant patient listings</li>
-          <li>Create interactive patient profiles with synchronized timelines, lab values, and treatment history</li>
-          <li>Deploy real-time filtering and brushing across linked visualizations for exploratory analysis</li>
-          <li>Add custom tooltips and annotations with patient-level details accessible on hover/click</li>
-          <li>Enable dynamic report generation capturing user interactions and filter states for reproducibility</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>💼 Value Proposition</h3>
-        <span class="meta meta--pop">Accelerate Insights, Reduce Timelines, Ensure Compliance</span>
-        <ul class="desc svc-list">
-          <li><strong>Speed to insights:</strong> Reduce dashboard development time by 60-80% vs. custom Shiny builds</li>
-          <li><strong>Regulatory-ready:</strong> Built-in validation framework meeting FDA/EMA electronic submission requirements</li>
-          <li><strong>Cost-effective:</strong> Leverage open-source pharmaverse ecosystem with enterprise support</li>
-          <li><strong>Scalable:</strong> Modular architecture grows from pilot studies to multi-study portfolios</li>
-          <li><strong>User empowerment:</strong> Enable clinical teams to explore data without programming knowledge</li>
-          <li><strong>Future-proof:</strong> Active community support and continuous updates from pharmaverse contributors</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>🎯 Industries &amp; Use Cases</h3>
-        <ul class="desc svc-list">
-          <li><strong>Pharmaceutical companies:</strong> Phase I-IV trial monitoring and regulatory submissions</li>
-          <li><strong>Biotech startups:</strong> Rapid dashboard deployment for investor presentations and data reviews</li>
-          <li><strong>CROs:</strong> Standardized reporting platforms across multiple client trials</li>
-          <li><strong>Academic medical centers:</strong> Investigator-initiated trials and real-world evidence studies</li>
-          <li><strong>Regulatory agencies:</strong> Interactive review tools for submission assessment</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>📊 Technical Differentiators</h3>
-        <ul class="desc svc-list">
-          <li><strong>Full-stack expertise:</strong> R/Shiny + JavaScript + validation + CDISC standards</li>
-          <li><strong>End-to-end delivery:</strong> Requirements gathering → development → validation → deployment → training</li>
-          <li><strong>Proven methodology:</strong> Agile development with 2-week sprint cycles and continuous stakeholder feedback</li>
-          <li><strong>Knowledge transfer:</strong> Comprehensive documentation and team training for sustainable maintenance</li>
-          <li><strong>Ongoing support:</strong> Post-deployment optimization, troubleshooting, and feature enhancements</li>
-        </ul>
-      </div>
-      <div class="card reveal">
-        <h3>📊 Case Studies</h3>
-        <h4>Teal Dashboard Build (from 0 to 20 Modules in less than a month)</h4>
-        <p><strong>Situation:</strong> Needed a full Teal dashboard built rapidly from scratch.</p>
-        <ul class="desc svc-list">
-          <li><strong>Work:</strong> Implemented Teal dashboard architecture and delivered 20 modules</li>
-          <li><strong>Impact:</strong> Delivered in under one month</li>
-        </ul>
-        <h4>Teal Framework Migration</h4>
-        <p><strong>Situation:</strong> Existing in-house visualizations and reports needed to move to Teal.</p>
-        <ul class="desc svc-list">
-          <li><strong>Work:</strong> Re-implemented visualizations and reports within Teal with validated components</li>
-          <li><strong>Impact:</strong> Standardized delivery and validation across modules</li>
-        </ul>
-        <h4>Wrap Teal Modules around JavaScript Visualizations</h4>
-        <ul class="desc svc-list">
-          <li><a href="https://teal-gsm-safety-teal.share.connect.posit.cloud" target="_blank" rel="noopener">gsm safety &#8599;</a></li>
-        </ul>
-      </div>
+      <div class="work-boxes reveal">
+
+        <div class="work-box">
+          <h3>Teal Dashboard Build (from 0 to 20 Modules in less than a month)</h3>
+          <h4 class="work-intro"><strong>Situation:</strong> Needed a full Teal dashboard built rapidly from scratch.</h4>
+          <ul class="work-list">
+            <li><strong>Work:</strong> Implemented Teal dashboard architecture and delivered 20 modules</li>
+            <li><strong>Impact:</strong> Delivered in under one month</li>
+          </ul>
+        </div>
+
+        <div class="work-box">
+          <h3>Teal Framework Migration</h3>
+          <h4 class="work-intro"><strong>Situation:</strong> Existing in-house visualizations and reports needed to move to Teal.</h4>
+          <ul class="work-list">
+            <li><strong>Work:</strong> Re-implemented visualizations and reports within Teal with validated components</li>
+            <li><strong>Impact:</strong> Standardized delivery and validation across modules</li>
+          </ul>
+        </div>
+
+        <div class="work-box">
+          <h3>Wrap Teal Modules around JavaScript Visualizations</h3>
+          <ul class="work-list">
+            <li><a href="https://teal-gsm-safety-teal.share.connect.posit.cloud" target="_blank" rel="noopener">gsm safety &#8599;</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -954,7 +904,7 @@
       var link = navLinkFor(sec.id);
       if(!link) return;
       var r = sec.getBoundingClientRect();
-      var p = (vh * 0.82 - r.top) / Math.max(1, r.height * 0.6);
+      var p = (vh * 0.82 - r.top) / Math.max(1, r.height);
       p = p < 0 ? 0 : (p > 1 ? 1 : p);
       link.style.setProperty('--p', (p * 100).toFixed(1) + '%');
     });
@@ -967,12 +917,12 @@
 
   /* scroll-spy: active nav item + per-section background color shift */
   var scenes = {
-    home:'#0b0b0d', who:'#0c0d12', thinking:'#0d0c10',
-    lab:'#0b0e0f', work:'#0e0c0d', personal:'#0d0b11'
+    home:'#ffffff', who:'#ffffff', thinking:'#ffffff',
+    lab:'#ffffff', work:'#ffffff', personal:'#ffffff'
   };
   var pops = {
-    home:'#3f6fff', who:'#ff5e3a', thinking:'#28e08c',
-    lab:'#9d5cff', work:'#3f6fff', personal:'#ff4f87'
+    home:'#ffffff', who:'#ffffff', thinking:'#ffffff',
+    lab:'#ffffff', work:'#ffffff', personal:'#ffffff'
   };
   var vivid = ['#3f6fff','#ff5e3a','#28e08c','#9d5cff','#ff4f87'];
   var vIdx = 0;
