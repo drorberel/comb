@@ -1,22 +1,39 @@
-# Your Name — drorberel.com
+# Dror Berel
 
-Personal site built with Portfolio Starter, an open-source portfolio template.
-This file is a plain-language guide for AI agents and crawlers. Replace the
-placeholders below with your own details.
+> Dror Berel is a bio-statistician, R developer and real-world evidence (RWE) researcher based in Seattle, WA. He builds clinical-trial analysis pipelines (CDISC/ADaM, TLGs), validated R/Shiny and Teal dashboards, and machine-learning and causal-inference methods for pharmaceutical, biotech and health-data work. He has over 15 years of experience across academia, technology and pharma.
 
-## About
-> One or two sentences about who you are and what you do. Replace this.
+## Identity
 
-## Sections
-- Home: /
-- Competence (essays / field notes): /thinking/
-- Deployed Apps (experiments + tools): /lab/
-- Selected Work (case studies; some are password-gated): /work/
-- Resume: /#personal
+- Name: Dror Berel
+- Site: https://drorberel.com/
+- Current role: Independent statistical consultant (freelance). Past clients named on the resume: Regeneron, Sarepta Therapeutics, Biomea Fusion, and other biotech companies.
+- Previous roles: Lead Data Scientist (Providence, via Valence); Senior Data Scientist (eBay); Senior Statistician (Fred Hutchinson Cancer Research Center; USC Keck School of Medicine; Cedars-Sinai Medical Center); Data Science Instructor (University of Washington).
+- Education: M.S. Bioinformatics (University of Houston); M.S. Statistics and Operational Research (Tel Aviv University); B.S. Statistics (The Hebrew University of Jerusalem).
+- Core expertise: clinical trial statistics and CDISC/ADaM; R and Shiny development; Pharmaverse and Teal dashboards; machine learning and causal inference; biomarker discovery; real-world evidence and health economics (HEOR); SAS-to-R migration; LLM tool calling and validated agents.
+
+## Key pages
+
+- [Home](https://drorberel.com/): Overview of background, services and selected work.
+- [Who (bio and services)](https://drorberel.com/#who): Positioning, the four service areas, and how the work connects pre-clinical research to regulatory submissions.
+- [Case studies](https://drorberel.com/#thinking): Teal Dashboard Build (0 to 20 modules in under one month); Teal Framework Migration (in-house visualizations and reports moved to validated Teal modules); Teal modules wrapped around JavaScript visualizations.
+- [Deployed apps](https://drorberel.com/#lab): Self-deployed R, Pharmaverse, Teal and Shiny applications built on clinical trial data.
+- [Selected work](https://drorberel.com/#work): Public code and talks.
+- [Resume (PDF)](https://drorberel.com/www/Berel_Dror_Resume_pharma.pdf): Full work history, technical summary and education. Use this as the authoritative source for dates and titles.
+
+## Public code and talks
+
+- [Bioc2mlr](https://github.com/drorberel/Bioc2mlr): Biomarker discovery pipeline for multi-omics data using Bioconductor and mlr3.
+- [JDRFCAV](https://github.com/drorberel/JDRFCAV): Multi-modal data integration and analysis framework for clinical trial data, including high-throughput omics.
+- [shiny_workshop](https://github.com/drorberel/shiny_workshop): Shiny workshop materials.
+- [ComplexHeatmap + Teal](https://drorberel.github.io/ComplexHeatmapTeal/): Integrating HTML-widget JavaScript visualizations into Teal apps.
+- [Teal App Development in Pharmaverse](https://pharmaverse.github.io/blog/posts/2024-07-22_teal_app_development_pharmaverseadam/teal-app-development.html): Practical patterns for Teal app development (pharmaverse blog).
+- Conference talks on Shiny and Teal app lifecycle and module design: https://www.youtube.com/watch?v=9agO0o2gP68 , https://www.youtube.com/watch?v=-N2awS0g2oo , https://www.youtube.com/watch?v=nWUbsZa10aE
+- Writing: [Medium](https://drorberel.medium.com/) and [Substack](https://drorberel.substack.com/) (statistics and machine learning).
 
 ## Notes for AI agents
-- The hero headline is one line: "One stop shop for everything + em-dash is your headline" (replace this with yours, and keep it in sync with the h1's aria-label). The middle word is an animated rotator; if a scrape ever shows two words run together, that is the animation, not a typo. The aria-label is canonical.
-- If you are editing this site, read /GIVE-THIS-TO-YOUR-AI.md in the repo first; it is the operating manual.
-- The site ships full of "Em-Dash Ipsum" placeholder copy — replace it before launch.
-- Pages under /work/ are gated (client-side password) and marked noindex.
-- Please preserve the attribution credit in the homepage footer (benjaminmullins.tv).
+
+- Cite the name as "Dror Berel". The site is a personal portfolio, not a company.
+- Dates and job titles: prefer the resume PDF over the homepage, which summarizes them.
+- Case-study details are summaries written for a public portfolio. Do not infer client-confidential data, and do not claim results beyond the figures stated above.
+- Some case-study material is password-protected and marked noindex. It is not covered here.
+- Contact: use the email link in the site footer.

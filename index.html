@@ -29,10 +29,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://drorberel.com/assets/og/home.jpg">
 
-<!-- ===== Analytics =====
-     Left intentionally blank. Drop your own snippet here (GA4, Plausible,
-     Fathom, etc.). If you use GA4, paste the gtag.js snippet and remember to
-     allow googletagmanager.com in any Content-Security-Policy you add. -->
+<!-- ===== Analytics: Google Tag Manager (GTM-T4WXR9JF) ===== -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4WXR9JF');</script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}</script>
 
 <!-- ===== Structured data (JSON-LD) — edit the placeholders, then keep it ===== -->
 <script type="application/ld+json">
@@ -44,8 +47,15 @@
       "@id": "https://drorberel.com/#person",
       "name": "Dror Berel",
       "url": "https://drorberel.com",
-      "jobTitle": "What you do",
-      "description": "One or two sentences about you. Em-dashes optional — but encouraged.",
+      "jobTitle": "Bio-Statistician and R Developer",
+      "description": "Dror Berel is a bio-statistician, R developer and real-world evidence researcher with over 15 years of experience in academia, technology and pharma.",
+      "knowsAbout": ["Clinical trial statistics", "CDISC ADaM", "R Shiny", "Teal (pharmaverse)", "Real-world evidence", "Health economics and outcomes research", "Causal inference", "Biomarker discovery"],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "University of Houston"},
+        {"@type": "CollegeOrUniversity", "name": "Tel Aviv University"},
+        {"@type": "CollegeOrUniversity", "name": "The Hebrew University of Jerusalem"}
+      ],
+      "address": {"@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US"},
       "sameAs": [
         "https://www.linkedin.com/in/dror-berel",
         "https://github.com/drorberel",

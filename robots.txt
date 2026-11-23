@@ -1,7 +1,52 @@
+# robots.txt for https://drorberel.com
+# Everything public is crawlable. Each named group below repeats "Allow: /"
+# on purpose, so the permission is explicit for search and AI-search operators.
+# Note: a crawler with its own group ignores the "*" group, so every named
+# group must carry its own rules. Keep them in sync.
+#
+# /work/ is NOT disallowed. Its pages carry <meta name="robots" content="noindex">,
+# and crawlers can only honour that if they are allowed to fetch the page.
+#
+# llms.txt (plain-language summary for AI agents): https://drorberel.com/llms.txt
+
 User-agent: *
 Allow: /
 
-# /work/ stays crawlable so the per-page `noindex` is actually honored —
-# do not Disallow it, or crawlers can't read the noindex and may index it anyway.
+# Traditional search
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Google AI Overviews and AI Mode use the Googlebot index, so no separate rule is needed for them.
+# Google-Extended controls use of content for Gemini model training and grounding only.
+# Allowing it does not change Search or AI Overviews visibility.
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI: OAI-SearchBot builds the index behind ChatGPT search results.
+# ChatGPT-User fetches a page when a user asks ChatGPT to open a link.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity: PerplexityBot builds the search index; Perplexity-User fetches pages for a user request.
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic (Claude): Claude-SearchBot for search answers; Claude-User for user-requested fetches.
+# ClaudeBot and GPTBot are training crawlers and are not named here; they fall under "*" (currently allowed).
+# To opt out of training, add "User-agent: GPTBot / Disallow: /" and the same for ClaudeBot.
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
 
 Sitemap: https://drorberel.com/sitemap.xml
